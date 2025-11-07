@@ -1,0 +1,203 @@
+/* This is your CSS files */
+.html {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 20px;
+}
+body {
+    color: black;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.site-header {
+    border: solid 1px black;
+    display:flex;
+    background-color:#dc4c3e;
+    align-items:space-between;
+    padding: 10px;
+}
+
+.site-header__status {
+    margin-left: auto;
+}
+
+.site-main {
+    border:solid 1px red;
+    display: grid;
+    grid-template-columns: 300px 1fr;;
+    min-height:100vh;
+}
+
+.navbar {
+    background-color: #fefbf2;
+    font-display:#000000;
+    padding-top: 35px;
+}
+
+.main-content {
+    background-color: white;
+    margin-left: 25px;
+    padding-top: 15px;
+    padding-left: 35px;
+}
+
+.task-counter {
+    padding-top: 10px;
+}
+
+.filter-buttons {
+    padding-top: 5px;
+}
+
+.filter-buttons button.active {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.delete-button {
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    border: none;
+    color: rgba(233, 95, 95, 0.548);
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.today-main-content {
+    display: none
+}
+
+.upcoming-main-content {
+    display: none
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.navbar-list label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.task-list {
+    list-style-type: none; 
+    padding: 0;            
+    margin: 0;
+}
+
+.inbox-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    border:1px solid gray;
+}
+
+.container input:checked ~ .checkmark {
+    background-color:lightcoral;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background:whitesmoke;
+}
+
+.search-container {
+    background: rgba(255,255,255,0.3);
+    display: flex;
+    padding: 5px;
+}
+
+.search-input {
+    border: none;
+    background: none;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.menu-icon {
+    width: 27px;
+    height:29px;
+    padding-right: 5px;
+}
+
+.inbox-icon {
+    width: 27px;
+    height:27px;
+}
+
+.check-icon {
+    margin-right: 5px;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+}
